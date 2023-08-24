@@ -5,13 +5,14 @@ import { AppComponent } from './app.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { EmpleadoFeoComponent } from './empleado-feo/empleado-feo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent, EmpleadosComponent, EmpleadoComponent, EmpleadoFeoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

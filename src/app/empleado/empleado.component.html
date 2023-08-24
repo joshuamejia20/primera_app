@@ -2,12 +2,25 @@
 <p>Apellido del empleado: {{ apellido }}</p>
 <p>Edad del empleado: {{ edad }}</p>
 <p>Tipo de empleado: {{ (edad>=18) ? "Es mayor de edad": "Es menor de edad" }}</p>
-<p>Empresa del empleado: {{ empresa.value }}</p>
+<p>Empresa del empleado: {{ empresa }}</p>
+Introduce la empresa <input type="text" [(ngModel)]="empresa"><br>
 
-Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitar_input_property">
-<br>
+<!--{{seleccion}} <br>-->
+<select [(ngModel)]="seleccion">
+    <option value="">Seleccione opción</option>
+    <option value="Hola">Hola</option>
+    <option value="Adios">Adios</option>
+</select>
+
+
+<!--Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitar_input_property">
+<br>-->
 <!--<button (click)="set_empresa(empresa.value)">Cambiar Empresa</button>-->
 {{ texto_registro }} <br>
-Registrado: <input type="checkbox" id="registro" [checked]="usuario_registrado_property" (click)="set_usuario_registrado()">
+Registrado: <input type="radio" name="n_registro" id="registro" [checked]="usuario_registrado_property" (click)="set_usuario_registrado($event)" value="si"><br>
+No registrado: <input type="radio" name="n_registro" (click)="set_usuario_registrado($event)" value="no">
+
+
+<!--<input type="checkbox" id="registro" [checked]="usuario_registrado_property" (click)="set_usuario_registrado()">-->
 
 <!--{{ cambiar_registro() }}-->
