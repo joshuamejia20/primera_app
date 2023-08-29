@@ -17,6 +17,23 @@ export class EmpleadoComponent {
   texto_registro = 'No hay nadie registrado';
   seleccion ='Hola';
 
+  color_boton_property = "background-color: blue; color: white;";
+  mensaje='';
+
+  estado_checkbox: boolean = true;
+
+  lanzar_mensaje(){
+    /*this.mensaje='Hola a todos';
+    let mensaje='caballo';
+    alert(mensaje);*/
+
+    if(this.color_boton_property=="background-color: blue; color: white;"){
+      this.color_boton_property ="background-color: red; color: white;";
+    }else{
+      this.color_boton_property ="background-color: blue; color: white;";
+    }
+  }
+
   getEdad(){
     return this.edad;
   }

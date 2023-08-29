@@ -24,3 +24,16 @@ No registrado: <input type="radio" name="n_registro" (click)="set_usuario_regist
 <!--<input type="checkbox" id="registro" [checked]="usuario_registrado_property" (click)="set_usuario_registrado()">-->
 
 <!--{{ cambiar_registro() }}-->
+
+<hr>
+
+<button [style]="color_boton_property" (click)="lanzar_mensaje()">
+    Cambiar color
+</button><br><br>
+
+<label>
+    <input type="checkbox" [(ngModel)]="estado_checkbox"> Marcar/Deshacer
+</label>
+<p>
+    Estado del checkbox: {{ estado_checkbox ? 'Marcado' : 'No marcado '}}
+</p>
