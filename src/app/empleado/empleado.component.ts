@@ -19,8 +19,21 @@ export class EmpleadoComponent {
 
   color_boton_property = "background-color: blue; color: white;";
   mensaje='';
+  color_input="#FF0000";
 
   estado_checkbox: boolean = true;
+
+  url_imagen_property='assets/media/img/imagen_prueba.jpg';
+
+  contador = 0;
+
+  incrementar(){
+    this.contador++;
+  }
+
+  decrementar(){
+    this.contador--;
+  }
 
   lanzar_mensaje(){
     /*this.mensaje='Hola a todos';

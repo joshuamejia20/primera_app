@@ -37,3 +37,13 @@ No registrado: <input type="radio" name="n_registro" (click)="set_usuario_regist
 <p>
     Estado del checkbox: {{ estado_checkbox ? 'Marcado' : 'No marcado '}}
 </p>
+<input type="color" [(ngModel)]="color_input">
+<p> {{ color_input }}</p>
+
+<hr>
+
+<img [src]="url_imagen_property"><br>
+
+<button (click)="incrementar()">Incrementar</button>
+{{ contador }}
+<button (click)="decrementar()">Decrementar</button>
