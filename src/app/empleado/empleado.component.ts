@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './empleado.component.css'
 })
 export class EmpleadoComponent {
+  nombre:string = "Josue";
+  apellido = "Mejia";
+  edad = 16;
+  empresa = 'CSJ';
 
+  getEdad(){
+    return this.edad;
+  }
+
+  llamar_empresa(empresa:string){}
 }
