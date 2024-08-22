@@ -12,10 +12,27 @@ export class EmpleadoComponent {
   apellido = "Mejia";
   edad = 16;
   empresa = 'CSJ';
+  habilitar_input_property = true;
+  usuario_registrado_property = false;
+  texto_registro = "No hay usuario registrado";
 
   getEdad(){
     return this.edad;
   }
 
   llamar_empresa(empresa:string){}
+
+  cambiar_registro(){
+    this.usuario_registrado_property=!this.usuario_registrado_property;
+  }
+
+  set_usuario_registrado(){
+    this.usuario_registrado_property=!this.usuario_registrado_property;
+    //alert('El usuario se ha registrado');
+    if(this.usuario_registrado_property){
+      this.texto_registro = "El usuario se acaba de registrar";
+    }else{
+      this.texto_registro = "No hay usuario registrado";
+    }
+  }
 }
