@@ -4,6 +4,8 @@
 <p>Nombre de la empresa: {{ empresa.value }}</p>
 Introduce el nombre de la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitar_input_property"><br>
 <b>{{ texto_registro }}</b><br>
-Usuario registrado: <input type="checkbox" id="registro" [checked]="usuario_registrado_property" (click)="set_usuario_registrado()">
+<!--Usuario registrado: <input type="checkbox" id="registro" [checked]="usuario_registrado_property" (click)="set_usuario_registrado()">-->
+Registrado: <input type="radio" name="n_registro" id="registro" [checked]="usuario_registrado_property" (click)="set_usuario_registrado($event)" value="si"><br>
+No registrado: <input type="radio" name="n_registro" value="no" (click)="set_usuario_registrado($event)">
 
 <!--<button (click)="llamar_empresa(empresa.value)">Cambiar</button>-->

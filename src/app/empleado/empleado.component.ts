@@ -26,10 +26,11 @@ export class EmpleadoComponent {
     this.usuario_registrado_property=!this.usuario_registrado_property;
   }
 
-  set_usuario_registrado(){
+  set_usuario_registrado(event: Event){
+    //alert((<HTMLInputElement>event.target).value);
     this.usuario_registrado_property=!this.usuario_registrado_property;
     //alert('El usuario se ha registrado');
-    if(this.usuario_registrado_property){
+    if((<HTMLInputElement>event.target).value=="si"){
       this.texto_registro = "El usuario se acaba de registrar";
     }else{
       this.texto_registro = "No hay usuario registrado";
