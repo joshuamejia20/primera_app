@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-empleado',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './empleado.component.html',
   styleUrl: './empleado.component.css'
 })
@@ -11,10 +12,11 @@ export class EmpleadoComponent {
   nombre:string = "Josue";
   apellido = "Mejia";
   edad = 16;
-  empresa = 'CSJ';
+  empresa = 'UCAD';
   habilitar_input_property = true;
   usuario_registrado_property = false;
   texto_registro = "No hay usuario registrado";
+  departamento = "2";
 
   getEdad(){
     return this.edad;
@@ -36,4 +38,8 @@ export class EmpleadoComponent {
       this.texto_registro = "No hay usuario registrado";
     }
   }
+
+  /*cambiar_empresa(event: Event){
+    this.empresa=(<HTMLInputElement>event.target).value;
+  }*/
 }
