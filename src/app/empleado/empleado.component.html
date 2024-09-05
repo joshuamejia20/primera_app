@@ -12,7 +12,13 @@ No registrado: <input type="radio" name="n_registro" value="no" (click)="set_usu
     <option value="">Seleccione un departamento</option>
     <option value="1">San Salvador</option>
     <option value="2">Santa Ana</option>
+    <option value="3">San Miguel</option>
+    <option value="4">Sonsonate</option>
 </select>
-{{ (departamento == "") ? "No seleccionado" : (departamento=="1") ? "San Salvador": "Santa Ana"}}
+{{ definir_depto() }}<br><br>
+
+<button [style]="estilo_definido" (click)="cambiar_color()">
+    Botón de prueba
+</button>
 
 <!--<button (click)="llamar_empresa(empresa.value)">Cambiar</button>-->

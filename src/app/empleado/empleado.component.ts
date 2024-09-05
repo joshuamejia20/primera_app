@@ -17,6 +17,39 @@ export class EmpleadoComponent {
   usuario_registrado_property = false;
   texto_registro = "No hay usuario registrado";
   departamento = "2";
+  texto_depto = "Seleccione un departamento";
+  estilo_definido = "background-color: red; color: white;";
+
+  cambiar_color(){
+    if(this.estilo_definido=="background-color: red; color: white;"){
+      this.estilo_definido= "background-color: blue; color: black;";
+    }else{
+      this.estilo_definido = "background-color: red; color: white;";
+    }
+  }
+
+  definir_depto(){
+    switch (parseInt(this.departamento)) {
+      case 1:
+        this.texto_depto = "San Salvador";
+        break;
+      case 2:
+        this.texto_depto = "Santa Ana";
+        break;
+      case 3:
+        this.texto_depto = "San Miguel";
+        break;
+      case 4:
+        this.texto_depto = "Sonsonate";
+        break;
+    
+      default:
+        this.texto_depto = "Seleccione un departamento";
+        break;
+    }
+
+    return this.texto_depto;
+  }
 
   getEdad(){
     return this.edad;
